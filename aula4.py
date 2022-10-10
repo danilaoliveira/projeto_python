@@ -1,5 +1,15 @@
 import tkinter as tk
+import mysql.connector
+#pip install mysql-connector
 
+def conxao():
+        #função= bloco de codigo que a gente cria para uma determinada função(chamar a função)
+        conexao = mysql.connector.connect(
+                host = "localhost",
+                user = "root",
+                passwd = "",
+                db = "usuarios"
+        )
 
 def cadastrarUsuarios():
     janelaUsuarios = tk.Toplevel(app)
